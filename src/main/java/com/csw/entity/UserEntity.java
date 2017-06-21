@@ -26,7 +26,7 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "user_name")
+    @Column(name = "username")
     public String getUserName() {
         return userName;
     }
