@@ -7,36 +7,20 @@ import javax.persistence.*;
  * Description:
  */
 @Entity
-@Table(name = "csw_user", schema = "", catalog = "csw")
-public class UserEntity {
+@Table(name = "auth_user", schema = "", catalog = "csw")
+public class UserEntity extends BaseEntity {
 
-    private Long id;
-    private String userName;
+    private String username;
     private String password;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", unique = true, nullable = false)
-    public Long getId() {
-        return id;
+    public String getUsername() {
+        return username;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    @Basic
-    @Column(name = "username")
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    @Basic
-    @Column(name = "password")
     public String getPassword() {
         return password;
     }
