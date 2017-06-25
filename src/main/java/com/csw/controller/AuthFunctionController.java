@@ -22,7 +22,9 @@ public class AuthFunctionController extends BaseController {
     @RequestMapping(method = RequestMethod.GET)
     public List<AuthFunctionEntity> getAll() {
 
-        return authFunctionService.findAll();
+        List<AuthFunctionEntity> authFunctionEntityList = authFunctionService.findAll();
+
+        return authFunctionEntityList;
     }
 
     @RequestMapping(method = RequestMethod.POST)
